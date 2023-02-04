@@ -16,7 +16,7 @@ class ImageConvert {
       } else if (image.format.group == ImageFormatGroup.bgra8888) {
         img = convertBGRA8888(image);
       }
-      return img.getBytes();
+      return img.getLuminanceBytes();
     } catch (e) {
       debugPrint('>>>>>>>>>>>> ERROR: $e');
     }
@@ -28,7 +28,7 @@ class ImageConvert {
         width: image.width,
         height: image.height,
         bytes: image.planes[0].bytes.buffer,
-        format: imglib.Format.uint32,
+        format: imglib.Format.uint8,
         order: imglib.ChannelOrder.bgra);
   }
 
@@ -38,5 +38,17 @@ class ImageConvert {
       invertedBytes[i] = 255 - invertedBytes[i];
     }
     return invertedBytes;
+  }
+}
+
+extension ImageLibImageExtension on imglib.Image
+{
+  Uint8List getLuminanceBytes()
+  {
+    List<int> luminances = <int>[];
+    for (var pixel in this) {
+      luminances.add(pixel.luminance.round());
+    }
+    return Uint8List.fromList(luminances);
   }
 }

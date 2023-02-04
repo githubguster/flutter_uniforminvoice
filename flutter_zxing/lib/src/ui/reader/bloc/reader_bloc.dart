@@ -228,7 +228,7 @@ class ReaderBloc extends Bloc<ReaderEvent, ReaderState> {
   final FlutterZXing zxing;
   final bool isShowGallery;
   List<CameraDescription> _cameras = <CameraDescription>[];
-  CameraController? _controller;
+  CameraController? _controller = null;
   bool _cameraOn = false;
 
   List<CameraDescription> get cameras => _cameras;

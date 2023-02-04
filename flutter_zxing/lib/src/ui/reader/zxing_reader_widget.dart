@@ -193,7 +193,6 @@ class _ZXingReaderWidgetState extends State<ZXingReaderWidget>
               bloc!.cameraOn &&
               bloc!.controller != null &&
               bloc!.controller!.value.isInitialized;
-          debugPrint('isCameraReady: $isCameraReady');
           final Size size = MediaQuery.of(context).size;
           final double cameraMaxSize = max(size.width, size.height);
           final double cropSize =

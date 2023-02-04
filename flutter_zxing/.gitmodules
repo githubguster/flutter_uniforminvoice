@@ -1,0 +1,3 @@
+[submodule "zxing-cpp"]
+	path = native_code/zxing-cpp
+	url = https://github.com/nu-book/zxing-cpp

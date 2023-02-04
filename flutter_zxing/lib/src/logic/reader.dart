@@ -68,7 +68,7 @@ Future<CodeResult?> zxingReadBarcodeImagePath(
     return null;
   }
   return zxingReadBarcode(
-    image.getBytes(),
+    image.getLuminanceBytes(),
     width: image.width,
     height: image.height,
     params: params,
@@ -87,7 +87,7 @@ Future<CodeResult?> zxingReadBarcodeImageUrl(
     return null;
   }
   return zxingReadBarcode(
-    image.getBytes(),
+    image.getLuminanceBytes(),
     width: image.width,
     height: image.height,
     params: params,
@@ -131,7 +131,7 @@ Future<List<CodeResult>> zxingReadBarcodesImagePath(
     return <CodeResult>[];
   }
   return zxingReadBarcodes(
-    image.getBytes(),
+    image.getLuminanceBytes(),
     width: image.width,
     height: image.height,
     params: params,
@@ -150,7 +150,7 @@ Future<List<CodeResult>> zxingReadBarcodesImageUrl(
     return <CodeResult>[];
   }
   return zxingReadBarcodes(
-    image.getBytes(),
+    image.getLuminanceBytes(),
     width: image.width,
     height: image.height,
     params: params,
