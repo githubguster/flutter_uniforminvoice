@@ -1,0 +1,3 @@
+[submodule "flutter_zxing/native_code/zxing-cpp"]
+	path = flutter_zxing/native_code/zxing-cpp
+	url = https://github.com/nu-book/zxing-cpp
