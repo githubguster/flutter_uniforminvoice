@@ -13,11 +13,11 @@ dependencies:
   plugin_platform_interface: ^2.0.2
   ffi: ^2.0.1
   permission_handler: ^10.2.0
-  image: ^4.0.13
-  camera: ^0.10.3
-  image_picker: ^0.8.6+1
+  image: ^4.0.15
+  camera: ^0.10.3+2
+  image_picker: ^0.8.6+4
   equatable: ^2.0.5
-  flutter_bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
   
 dev_dependencies:
   flutter_test:
