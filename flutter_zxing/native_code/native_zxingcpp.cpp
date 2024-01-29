@@ -13,7 +13,7 @@ extern "C"
 {
 #endif
 
-#define ZXING_VERSION "2.0.0"
+#define ZXING_VERSION "2.2.1"
 
     FUNCTION_ATTRIBUTE
     void setLogEnabled(int enable)
@@ -68,7 +68,7 @@ extern "C"
         {
             image = image.cropped(width / 2 - cropWidth / 2, height / 2 - cropHeight / 2, cropWidth, cropHeight);
         }
-        ZXing::DecodeHints hints = ZXing::DecodeHints()
+        ZXing::ReaderOptions hints = ZXing::ReaderOptions()
                                        .setTryHarder(static_cast<bool>(tryHarder))
                                        .setTryRotate(static_cast<bool>(tryRotate))
                                        .setTryInvert(static_cast<bool>(tryInvert))
@@ -106,7 +106,7 @@ extern "C"
         {
             image = image.cropped(width / 2 - cropWidth / 2, height / 2 - cropHeight / 2, cropWidth, cropHeight);
         }
-        ZXing::DecodeHints hints = ZXing::DecodeHints()
+        ZXing::ReaderOptions hints = ZXing::ReaderOptions()
                                        .setTryHarder(static_cast<bool>(tryHarder))
                                        .setTryRotate(static_cast<bool>(tryRotate))
                                        .setTryInvert(static_cast<bool>(tryInvert))
